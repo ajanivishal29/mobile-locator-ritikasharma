@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ad">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bankname_view_img"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/realocation_bank_yes" />
+
+                    <TextView
+                        android:id="@+id/bankname_view_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="BANK NAME"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/check_balance_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/bgtool">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/realocation_bank_itembg"
+                    android:backgroundTint="@color/bgtool"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Check Your Account Balance"
+                        android:textColor="@color/white" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/balance_phonecall"
+                        android:layout_width="176dp"
+                        android:layout_height="38dp"
+                        android:layout_below="@+id/text"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="@color/bg"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="5dp">
+
+                        <TextView
+                            android:id="@+id/check_balance_number"
+                            android:layout_width="124dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="Not Available"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:src="@drawable/realocation_call_icon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/share1"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/text"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/img_share"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="SHARE"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/realocation_ic_share"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_care_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/check_balance_card"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/bgtool">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/realocation_bank_itembg"
+                    android:backgroundTint="@color/bgtool"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Customercare Contact"
+                        android:textColor="@color/white" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/customercare_phonecall"
+                        android:layout_width="176dp"
+                        android:layout_height="38dp"
+                        android:layout_below="@+id/text1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="@color/bg"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="5dp">
+
+                        <TextView
+                            android:id="@+id/customer_care_number"
+                            android:layout_width="124dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="Not Available"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:src="@drawable/realocation_call_icon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/share2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/text1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/img_share1"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5dp"
+                            android:text="SHARE"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/realocation_ic_share"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mini_statement_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customer_care_card"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/bgtool">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/realocation_bank_itembg"
+                    android:backgroundTint="@color/bgtool"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="MiniStatement Contact"
+                        android:textColor="@color/white" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/statement_phonecall"
+                        android:layout_width="176dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="@color/bg"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="5dp">
+
+                        <TextView
+                            android:id="@+id/mini_statement_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="Not Available"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:src="@drawable/realocation_call_icon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/share3"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/text2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/img_share2"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5dp"
+                            android:text="SHARE"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/realocation_ic_share"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/ad"
+        layout="@layout/pgrs_activity_main_nativeads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

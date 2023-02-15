@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="layout/activity_start_applictaion_0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/topads">
+
+        <include
+            android:id="@+id/ad"
+            layout="@layout/pgrs_activity_main_nativeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ad"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/continue_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_marginLeft="@dimen/_24sdp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="@dimen/_24sdp"
+                android:background="@drawable/bg_section"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Location"
+                    android:textAppearance="@style/MainMenuText" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_54sdp"
+                android:adjustViewBounds="true"
+                android:background="@color/colorBg"
+                android:src="@drawable/ic_location" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/topads"
+        layout="@layout/pgrs_activity_main_smallnativeads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

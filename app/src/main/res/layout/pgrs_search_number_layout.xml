@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topads"
+        layout="@layout/pgrs_activity_main_smallnativeads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/editnumber"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/topads"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/searcheasyfirstrow"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/realocation_country_btn">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/hbbcode"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:ccp_defaultNameCode="IN" />
+
+            <com.calleridname.calldetailcallhistory.numberlocation_activity.countrycodepicker.CountryCode_Picker
+                android:id="@+id/spincountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:transitionName="IN"
+                android:visibility="gone"
+                app:backgroundColor="@color/white" />
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/hbbcode"
+                android:background="@null"
+                android:hint="@string/enter_number"
+                android:inputType="number"
+                android:maxLength="12"
+                android:padding="10dp"
+                android:textColor="#2e2e2e"
+                android:textColorHint="#2e2e2e"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/submitfinal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="13dp"
+            android:src="@drawable/realocation_searchblue"
+            android:text="Show My Location Map"
+            app:tint="#616161" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editnumber"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/lay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="3dp">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.calleridname.calldetailcallhistory.numberlocation_activity.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="5dp"
+            android:background="#fff"
+            android:clickable="true"
+            android:focusable="false"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/alldetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/iconlay"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/logoimage"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/realocation_ic_connn" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/viewlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iconlay"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:textColor="@color/text_color"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/operator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:text="Operator:"
+                        android:textColor="@color/text_color"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/operator"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="State: "
+                            android:textColor="@color/text_color"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/comma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=", "
+                            android:textColor="@color/text_color"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/callLocatorCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Country: "
+                            android:textColor="@color/text_color"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/userprofile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iconlay"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/pop_call"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/realocation_roundclrimg"
+                                android:src="@drawable/realocation_call" />
+
+                            <TextView
+                                android:id="@+id/call_pop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/call_popup"
+                                android:textColor="@color/text_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/pop_save"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/realocation_roundclrimg"
+                                android:src="@drawable/realocation_ic_savee" />
+
+                            <TextView
+                                android:id="@+id/save_pop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/save_popup"
+                                android:textColor="@color/text_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/pop_block"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/realocation_roundclrimg"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/realocation_ic_blockk" />
+
+                            <TextView
+                                android:id="@+id/block_pop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/block_popup"
+                                android:textColor="@color/text_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/pop_track"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/realocation_roundclrimg"
+                                android:src="@drawable/realocation_ic_trackk" />
+
+                            <TextView
+                                android:id="@+id/track_pop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/track_popup"
+                                android:textColor="@color/text_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/scroll_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userprofile" />
+
+                <LinearLayout
+                    android:id="@+id/defaultvis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userprofile"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.calleridname.calldetailcallhistory.numberlocation_activity.SlidingUpPanelLayout>
+</RelativeLayout>

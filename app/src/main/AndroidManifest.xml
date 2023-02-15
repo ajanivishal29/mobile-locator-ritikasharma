@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.calleridname.calldetailcallhistory">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.telephony" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.TYPE_APPLICATION_OVERLAY" />
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"
+        android:required="true" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.calleridname.calldetailcallhistory.Main_Ads.pgrs_App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon512"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/icon512"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileNumberLocatorTrueCallerid"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.CallHomebtnActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.pgrs_HomePage_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.ussd_activity.pgrs_USSD_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.numberlocation_activity.pgrs_LocationSearch_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.numberlocation_activity.Callblock.Call_Blocker"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_Setting_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.bank_activity.pgrs_Banklist_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.bank_activity.pgrs_BankInfoDetails_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.isd_activity.pgrs_CodeList_ISD"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.std_code_activity.pgrs_CodeList_STD"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_LiveLocationTracker_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.traffic_activity.pgrs_Traffic_Finder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.sim_information_activity.pgrs_SimInfo_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.sim_information_activity.pgrs_Sim_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.nearby_activity.pgrs_PlaceNotFound_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.device_activity.pgrs_DeviceInfo_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.system_activity.pgrs_SystemUsage_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_ManageAudio_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_Tools_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.recharge_activity.pgrs_Rechargee_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.Main_Ads.pgrs_Splace_Activity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.Main_Ads.admob_ads.realocation_Privacy_PolicyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.Main_Ads.pgrs_thankyou"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_StartApplictaion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_Second_intro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_First_intro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_Web_pp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.C6178a"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_FindAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_GPSTimeActivityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_IsdCodesAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_LiveLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_LocationAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_LiveWeatherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_LocationInfoAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_NumberLocatorOpenAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_NumberLocatorAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_StdCodesAct"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB2nul3xCrb5SZqVgH9jJ_sBpS1sXFtRq4" />
+
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.calleridname.calldetailcallhistory.activity.pgrs_CompassActivityActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNService"
+            android:exported="true"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:stopWithTask="true">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

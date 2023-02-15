@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/bgtool"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Near By Places"
+            android:textColor="@color/appcolor"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/topads"
+        android:layout_below="@+id/header"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Food &amp; Drink"
+                android:textAppearance="@style/MenuText"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutFoodDrink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutRestaurant"
+                    style="@style/layout_item_map_type_children"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        style="@style/image_map_place"
+                        android:src="@drawable/i1" />
+
+                    <TextView
+                        style="@style/text_item"
+                        android:text="Restaurant" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutBar"
+                    style="@style/layout_item_map_type_children"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        style="@style/image_map_place"
+                        android:src="@drawable/ic_near_bar" />
+
+                    <TextView
+                        style="@style/text_item"
+                        android:text="Bar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutCoffee"
+                    style="@style/layout_item_map_type_children"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        style="@style/image_map_place"
+                        android:src="@drawable/ic_nearby_coffe" />
+
+                    <TextView
+                        style="@style/text_item"
+                        android:text="Coffee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutDelivery"
+                    style="@style/layout_item_map_type_children"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        style="@style/image_map_place"
+                        android:src="@drawable/ic_nearby_truck" />
+
+                    <TextView
+                        style="@style/text_item"
+                        android:text="Delivery" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/ad"
+                layout="@layout/pgrs_activity_main_nativeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Services"
+                android:textAppearance="@style/MenuText"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutHotel"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_hotel" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Hotel" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAtm"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/i4" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="ATM" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutBeautySalon"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_cach" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Beauty Salons" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutBank"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_bank12" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Bank" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDryClean"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_drycln" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Dry Clean" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutHospital"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_hospital" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Hospital" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutGas"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_gas" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Gas" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutPharmacy"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_pharma" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Pharmacy" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutParking"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_park" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Parking" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Things To Do"
+                android:textAppearance="@style/MenuText"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutThingToDo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutPark"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_park" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Park" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutGym"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_gym" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Gym" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutArt"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_art" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Art" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutStadium"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_stadium" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Stadium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutNightlife"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_nightlife" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Night Life" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAmusementPark"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_mesume" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Amusement Park"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutMovie"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_movie" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Movies" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutMuseum"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_mesume" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Museum" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutLibrary"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/i_book" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Library" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Shopping"
+                android:textAppearance="@style/MenuText"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutGroceries"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_grocery" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Grocery" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutBook"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_bookss" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Book" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutCarDealer"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_car" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Car Dealers" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutHomeGarden"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_hommee" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Home Garden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutClothing"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/i_clothess" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Apparel" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutShoppingCenter"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_shopiing" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Shopping Center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutElectronics"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_elec" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Electronic" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutJelwery"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:src="@drawable/ic_jewelry" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Jewelry" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutConvenienceStore"
+                        style="@style/layout_item_map_type_children"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <ImageView
+                            style="@style/image_map_place"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_store" />
+
+                        <TextView
+                            style="@style/text_item"
+                            android:text="Convenience Store"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/topads"
+        layout="@layout/pgrs_activity_main_smallnativeads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="11dp"
+        android:text="sdsdasd"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2e2e2e"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/chkMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number"
+        android:checked="false"
+        android:text="@string/message"
+        android:textColor="#2e2e2e" />
+
+    <CheckBox
+        android:id="@+id/chkCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chkMsg"
+        android:layout_toRightOf="@+id/chkMsg"
+        android:text="@string/call"
+        android:textColor="#2e2e2e" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="29dp"
+        android:background="@drawable/realocation_ic_delete"
+        android:tint="@color/appcolor" />
+</RelativeLayout>

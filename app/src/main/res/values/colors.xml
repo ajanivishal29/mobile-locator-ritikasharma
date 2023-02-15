@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#000</color>
+    <color name="purple_500">#000</color>
+    <color name="purple_700">#A917F8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorAccent">#A917F8</color>
+    <color name="colorPrimary">#A917F8</color>
+    <color name="colorPrimaryDark">#00768f</color>
+    <color name="toolbar_color">#fff</color>
+    <color name="text_color">@color/white</color>
+    <color name="appcolor">#FFF</color>
+    <color name="lightgrey">#e4e3e3</color>
+    <color name="middle">#089cf2</color>
+    <color name="greybg">#f4f4f6</color>
+    <color name="bgcolor">#f6f7fb</color>
+    <color name="defaultTextColor">#ff000000</color>
+
+    <color name="bg">#A917F8</color>
+    <color name="bgtool">#A917F8</color>
+    <color name="transs">#3e3a3a3a</color>
+
+    <color name="grey">#80FFFFFF</color>
+    <color name="blue">#008ffe</color>
+
+    <color name="textcolor">@color/white</color>
+
+    <color name="bg_ads_vid_img">#485057</color>
+    <color name="add_and_btn_color">#A917F8</color>
+    <color name="txt_color">#000</color>
+
+
+    <color name="colorBg">#fbfcfe</color>
+    <color name="textGrey">#4b4b4b</color>
+    <color name="colorMenu1">#00a38a</color>
+    <color name="colorMenu2">#7000e6</color>
+    <color name="colorMenu3">#0098f3</color>
+    <color name="colorMenu4">#83e600</color>
+    <color name="colorMenu5">#f3a700</color>
+    <color name="colorMenu6">#9C27B0</color>
+</resources>
